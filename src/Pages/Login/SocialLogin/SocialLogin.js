@@ -9,20 +9,20 @@ import github from '../../../images/social/github.png';
 const SocialLogin = () => {
 
     const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
-    const [signInWithGithub, user1, loading1, error1] = useSignInWithGithub(auth);
+    const [signInWithGithub, userGithub, loadingGithub, errorGithub] = useSignInWithGithub(auth);
 
     const navigate = useNavigate();
     let errorElement;
 
-    if (error || error1) {
-        errorElement = <p className='text-danger'>Error: {error?.message} {error1?.message}</p>
+    if (error || errorGithub) {
+        errorElement = <p className='text-danger'>Error: {error?.message} {errorGithub?.message}</p>
     }
 
-    if (loading || loading1) {
+    if (loading || loadingGithub) {
         return <Loading></Loading>
     }
 
-    if (user || user1) {
+    if (user || userGithub) {
         navigate('/home');
     }
 

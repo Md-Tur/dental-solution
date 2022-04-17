@@ -3,6 +3,7 @@ import { Button, Form } from 'react-bootstrap';
 import { Link, useNavigate } from 'react-router-dom';
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
+import Loading from '../../Shared/Loading/Loading';
 
 const Register = () => {
 
@@ -33,6 +34,10 @@ const Register = () => {
         navigate('/login');
     }
 
+    if (loading) {
+        return <Loading></Loading>
+    }
+
     if (user) {
         navigate('/home');
     }
@@ -61,7 +66,7 @@ const Register = () => {
                     Register
                 </Button>
             </Form>
-            <p>Registered Patient?<Link to='/login' className='text-success text-decoration-none' onClick={navigateLogin}>Please Login</Link></p>
+            <p>Registered Patient?<Link to='/login' className='text-primary text-decoration-none' onClick={navigateLogin}>Please Login</Link></p>
         </div>
     );
 };
