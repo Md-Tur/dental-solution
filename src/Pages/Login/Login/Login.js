@@ -1,34 +1,42 @@
 import React, { useRef } from 'react';
 import { Button, Form } from 'react-bootstrap';
+import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link, useNavigate } from 'react-router-dom';
+import auth from '../../../firebase.init';
 
-const Register = () => {
-    const nameRef = useRef('');
+const Login = () => {
+
+    const [
+        signInWithEmailAndPassword,
+        user,
+        loading,
+        error,
+    ] = useSignInWithEmailAndPassword(auth);
+
     const emailRef = useRef('');
     const passwordRef = useRef('');
     const navigate = useNavigate();
 
-    const handleRegister = event => {
+    const handleLogin = event => {
         event.preventDefault();
-        const name = nameRef.current.value;
         const email = emailRef.current.value;
         const password = passwordRef.current.value;
 
-        console.log(name, email, password);
+        signInWithEmailAndPassword(email, password);
     }
 
-    const navigateLogin = () => {
-        navigate('/login');
+    const navigateRegister = () => {
+        navigate('/register');
+    }
+
+    if (user) {
+        navigate('/home');
     }
 
     return (
         <div className='container w-50 mx-auto'>
-            <h2 className='text-primary text-center mt-3'>Please Register Here</h2>
-            <Form onSubmit={handleRegister}>
-                <Form.Group className="mb-3" controlId="formBasicName">
-                    <Form.Label>Name</Form.Label>
-                    <Form.Control ref={nameRef} type="name" placeholder="Enter name" required />
-                </Form.Group>
+            <h2 className='text-primary text-center mt-3'>Please Login here</h2>
+            <Form onSubmit={handleLogin}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Email address</Form.Label>
                     <Form.Control ref={emailRef} type="email" placeholder="Enter email" required />
@@ -45,12 +53,12 @@ const Register = () => {
                     <Form.Check type="checkbox" label="Check me out" />
                 </Form.Group>
                 <Button variant="primary" type="submit">
-                    Register
+                    Login
                 </Button>
             </Form>
-            <p>Registered Patient?<Link to='/login' className='text-success text-decoration-none' onClick={navigateLogin}>Please Login</Link></p>
+            <p>New patient here?<Link to='/register' className='text-primary text-decoration-none' onClick={navigateRegister}>Please Register</Link></p>
         </div>
     );
 };
 
-export default Register;
+export default Login;
