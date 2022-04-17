@@ -13,7 +13,7 @@ const Service = ({ service }) => {
             <p>Price: {price} </p>
             <p><small> {description} </small></p>
             <div className='d-flex justify-content-center'>
-                <Link to='/checkout'>
+                <Link to='/appoinments'>
                     <button className='btn btn-primary'>Take Apoinment: {name} </button>
                 </Link>
             </div>
