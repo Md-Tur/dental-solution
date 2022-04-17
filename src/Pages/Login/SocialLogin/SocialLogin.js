@@ -7,6 +7,7 @@ import google from '../../../images/social/google.png';
 import github from '../../../images/social/github.png';
 
 const SocialLogin = () => {
+
     const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
     const [signInWithGithub, user1, loading1, error1] = useSignInWithGithub(auth);
 
@@ -24,6 +25,7 @@ const SocialLogin = () => {
     if (user || user1) {
         navigate('/home');
     }
+
     return (
         <div>
             <div className='d-flex align-items-center'>
