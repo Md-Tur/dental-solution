@@ -1,7 +1,7 @@
 # A project on Dental Solution
 ## This is a personal website for a dentist
 
-This project is created with react. It's based on a profession of a person.
+This project is created with react. It's based on a profession of a person.\
 Live site: [Dental Solution](https://dental-solution-6f8eb.web.app/).
 
 ## Features of this project
