@@ -8,7 +8,7 @@ const Service = ({ service }) => {
             <h2> {name} </h2>
             <p>Price: {price} </p>
             <p><small> {description} </small></p>
-            <button>Take Apoinment: {name} </button>
+            <button>Take Apoinment here: {name} </button>
         </div>
     );
 };
