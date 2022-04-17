@@ -13,7 +13,7 @@ const Register = () => {
         user,
         loading,
         error,
-    ] = useCreateUserWithEmailAndPassword(auth);
+    ] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
 
     const nameRef = useRef('');
     const emailRef = useRef('');
@@ -26,9 +26,7 @@ const Register = () => {
         const email = emailRef.current.value;
         const password = passwordRef.current.value;
 
-        if (agree) {
-            createUserWithEmailAndPassword(email, password);
-        }
+        createUserWithEmailAndPassword(email, password);
     }
 
     const navigateLogin = () => {
