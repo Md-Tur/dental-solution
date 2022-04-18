@@ -12,13 +12,6 @@ const firebaseConfig = {
     storageBucket: "dental-solution-6f8eb.appspot.com",
     messagingSenderId: "812506459742",
     appId: "1:812506459742:web:9f4f79a89eaa5b87750ecf"
-
-    // apiKey: process.env.REACT_APP_apiKey,
-    // authDomain: process.env.REACT_APP_authDomain,
-    // projectId: process.env.REACT_APP_projectId,
-    // storageBucket: process.env.REACT_APP_storageBucket,
-    // messagingSenderId: process.env.REACT_APP_messagingSenderId,
-    // appId: process.env.REACT_APP_appId
 };
 
 // Initialize Firebase
