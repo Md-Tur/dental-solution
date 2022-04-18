@@ -10,7 +10,7 @@
         "id": 2,
         "img": "https://i.ibb.co/8zjmhKp/root-infection.png",
         "name": "Root Infection",
-        "description": "The base or root of your tooth can become infected and swollen with bacteria. This most often happens because of cavities, cracks, or fractures in the tooth. Root infection can lead to damaged tissues and nerves of the tooth, and eventually to the development of abscesses.",
+        "description": "The base or root of your tooth can become infected and swollen with bacteria. This most often happens because of cavities, cracks, or fractures in the tooth. Root infection can lead to damaged tissues and nerves of the tooth, and eventually to the development of abscesses.A root infection is treated by a root canal. ",
         "price": "150"
     },
     {
@@ -31,7 +31,7 @@
         "id": 5,
         "img": "https://i.ibb.co/qJ8NFc5/teeth-enamel.png",
         "name": "Enamel Erosion",
-        "description": "Enamel erosion is a condition that develops very slowly and leaves teeth both discolored and rounded-looking. Its primary cause is consuming plenty of sugary and acidic foods such as soda and sweets over a long period of time. A rare cause is brushing your teeth too often, too hard, and too long.",
+        "description": "Enamel erosion is a condition that develops very slowly and leaves teeth both discolored and rounded-looking. Its primary cause is consuming plenty of sugary and acidic foods such as soda and sweets over a long period of time. A rare cause is brushing your teeth too often.",
         "price": "250"
     },
     {
