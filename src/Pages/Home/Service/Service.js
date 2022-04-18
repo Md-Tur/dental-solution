@@ -12,8 +12,8 @@ const Service = ({ service }) => {
                 </div>
                 <div>
                     <h2> {name} </h2>
-                    <p>Price: {price} </p>
                     <p><small> {description} </small></p>
+                    <p>Price: {price} </p>
                 </div>
                 <div style={{ bottom: '0' }} className='d-flex justify-content-center'>
                     <Link to='/appoinments'>
