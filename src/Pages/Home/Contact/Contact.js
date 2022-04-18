@@ -8,7 +8,7 @@ const Contact = () => {
                 <p>Phone: 01218111999</p>
                 <p>Mail: dentalsolution@mail.com</p>
                 <p>Telephone: 21345678</p>
-                <p>Time: Every Saturday to Thursday (10am to 4pm)</p>
+                <p>Time: Every Saturday to Thursday (10:00am to 04:00pm)</p>
                 <p>Address: Bosundhara,Dhaka-1200</p>
             </div>
         </div>
